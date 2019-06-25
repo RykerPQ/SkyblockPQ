@@ -1,0 +1,55 @@
+config:
+   allowselling: true
+# Add items in the same format to sell or buy more
+items:
+   item1:
+      material: LAVA_BUCKET
+      quantity: 1
+      price: 100
+   item2: WATER_BUCKET
+      quantity: 1
+      price: 100
+   item3:
+      material: DIRT
+      quantity: 1
+      price: 10
+      sellprice: 1
+      description: Dirt
+   item4:
+      material: IRON_INGOT
+      quantity: 1
+      price: 25
+      sellprice: 5
+      description: Iron Bars
+   item5:
+      material: GRASS
+      quantity: 1
+      price: 150
+   item6:
+      material: DIAMOND
+      quantity: 1
+      price: 200
+      sellprice: 75
+      description: Diamonds
+   item7:
+      material: MONSTER_EGG
+      quantity: 1
+      extra: PIG
+      price: 300
+      description: A pig
+   item8:
+      material: MONSTER_EGG
+      quantity: 1
+      extra: COW
+      price: 300
+      description: A pig
+   item9:
+      material: SAPLING
+      quantity: 4
+      price: 150
+   item10:
+      material: POTION
+      quantity: 1
+      extra: FIRE_RESISTENCE:EXTENDED
+      price: 200
+      description: I don’t know why you need a fire risistence potion...
