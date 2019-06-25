@@ -1,0 +1,411 @@
+name: SkyblockPQ
+main: com.wasteofplastic.skyblockpq.SkyblockPQ
+version: ${version}
+description: A SkyBlock Plugin
+author: Rykerpq
+depend: [Vault]
+load: startup
+loadbefore: [Multiverse-Core]
+commands:
+    island:
+        description: Main player command
+        aliases: [is, island]
+        usage:  |
+             /island help
+    asadmin:
+        description: Admin commands
+        usage:  |
+            /asadmin
+    asc:
+        description: Game challenges
+        aliases: [c, challenge, aschallenge, challenges]
+        usage:  |  
+            /challenge
+permissions:    
+  skyblockpq.*:
+    default: false
+    children:
+      skyblockpq.island.*:
+        children:
+          askyblock.island.go:
+            description: Allow teleporting to player island
+            default: true
+          skyblockpq.island.create:
+            description: Let the player use the /island command
+            default: true
+          skyblockpq.island.info:
+            description: Let the player check their island level
+            default: true
+          skyblockpq.island.topten:
+            description: Let the player see the top ten list
+            default: true
+          skyblockpq.island.sethome:
+            description: Let the player set their island teleport point
+            default: true
+          skyblockpq.island.challenges:
+            description: Let the player use the /challenges command
+            default: true
+          skyblockpq.island.warp:
+            description: Let the player use /island warp to warp to a players island
+            default: true
+          skyblockpq.island.addwarp:
+            description: Let the player place a Welcome warp sign
+            default: true
+          skyblockpq.island.shop:
+            description: Allows usage of the shop
+            default: true
+          skyblockpq.island.controlpanel:
+            description: Allows usage of the island GUI
+            default: true
+          skyblockpq.island.controlpanelonoff:
+            description: Allows turning on/off of the island GUI
+            default: true
+          skyblockpq.island.biomes:
+            description: Allows biome changing
+            default: false
+          skyblockpq.island.lock:
+            description: Allows island locking
+            default: false
+          skyblockpq.island.expel:
+            description: Allows expelling of visitors
+            default: true
+          skyblockpq.island.ban:
+            description: Allows banning of visitors
+            default: true
+          skyblockpq.island.settings:
+            description: Player can see server settings
+            default: false
+          skyblockpq.island.lang:
+            description: Player can select a language
+            default: true
+          skyblockpq.island.name:
+            description: Player can set the name of their island
+            default: false
+          skyblockpq.island.value:
+            description: Player can see the value of a block
+            default: true
+          skyblockpq.island.spawn:
+            description: Player can use the island spawn command if spawn exists
+            default: true
+          skyblockpq.island.reset:
+            description: Player can use the island reset or restart command
+            default: true  
+      skyblockpq.team.*:
+        children:
+          skyblockpq.team.create:
+            description: Let a player invite other players to join a team
+            default: true
+          skyblockpq.team.kick:
+            description: Let a player kick other players
+            default: true
+          skyblockpq.team.makeleader:
+            description: Let a player make another player leader of the team
+            default: true
+          skyblockpq.team.join:
+            description: Let a player join another player's team
+            default: true
+          skyblockpq.team.chat:
+            description: Allow player to use team chat
+            default: true
+      skyblockpq.command.*:
+        description: Event commands will not be run for players with this perm
+        default: false
+        children:
+          skyblockpq.command.resetexempt:
+            description: Player is exempt from commands run when island resets
+            default: false
+          skyblockpq.command.leaveexempt:
+            description: Player is exempt from commands run when they leave or are kicked. Note will not help if player is offline.
+            default: false
+          skyblockpq.command.newexempt:
+            description: Player is exempt from commands run when starting an island
+            default: false
+          skyblockpq.command.challengeexempt:
+            description: Player is exempt from commands run when a challenge is completed
+            default: false
+          skyblockpq.command.newteamexempt:
+            description: Player is exempt from commands run when accepting a team invite
+            default: false
+      skyblockpq.coop:
+        description: Allows player to use the coop command
+        default: True    
+      skyblockpq.craft.*:
+        children:
+          skyblockpq.craft.enderchest:
+            description: Allow crafting and use of enderchests in askyblock
+            default: false
+          skyblockpq.craft.dirt:
+            description: Allows tilling of coarse dirt into dirt
+            default: true
+      skyblockpq.intopten:
+        description: Includes player in top ten
+        default: true
+      skyblockpq.nohunger:
+        description: Excludes player from hunger if on island
+        default: false
+      skyblockpq.islandfly:
+        description: Allow player to fly inside his island boundaries
+        default: false
+      skyblockpq.settings.*:
+        description: Ability to change settings in GUI
+        default: false
+        children:
+          skyblockpq.settings.ACID_DAMAGE:
+            description: Can configure the Acid Damage setting
+            default: false
+          skyblockpq.settings.ANVIL:
+            description: Can configure the Anvil setting
+            default: false
+          skyblockpq.settings.ARMOR_STAND:
+            description: Can configure the Armor Stand setting
+            default: true
+          skyblockpq.settings.BEACON:
+            description: Can configure the Beacon setting
+            default: false
+          skyblockpq.settings.BED:
+            description: Can configure the Bed setting
+            default: false
+          skyblockpq.settings.BREAK_BLOCKS:
+            description: Can configure the Break Blocks setting
+            default: false
+          skyblockpq.settings.BREEDING:
+            description: Can configure the Breeding setting
+            default: false
+          skyblockpq.settings.BREWING:
+            description: Can configure the Brewing setting
+            default: false
+          skyblockpq.settings.BUCKET:
+            description: Can configure the Bucket setting
+            default: false
+          skyblockpq.settings.COLLECT_LAVA:
+            description: Can configure the Collect Lava setting
+            default: false
+          skyblockpq.settings.COLLECT_WATER:
+            description: Can configure the Collect Water setting
+            default: false
+          skyblockpq.settings.CHEST:
+            description: Can configure the Chest setting
+            default: false
+          skyblockpq.settings.CHORUS_FRUIT:
+            description: Can configure the Chorus Fruit setting
+            default: false
+          skyblockpq.settings.CRAFTING:
+            description: Can configure the Crafting setting
+            default: false
+          skyblockpq.settings.CREEPER_PAIN:
+            description: Can configure the Creeper Pain setting
+            default: false
+          skyblockpq.settings.CROP_TRAMPLE:
+            description: Can configure the Crop Trample setting
+            default: false
+          skyblockpq.settings.DOOR:
+            description: Can configure the Door setting
+            default: false
+          skyblockpq.settings.EGGS:
+            description: Can configure the Eggs setting
+            default: false
+          skyblockpq.settings.ENCHANTING:
+            description: Can configure the Enchanting setting
+            default: false
+          skyblockpq.settings.ENDER_PEARL:
+            description: Can configure the Ender Pearl setting
+            default: false
+          skyblockpq.settings.ENTER_EXIT_MESSAGES:
+            description: Can configure the Enter Exit Messages setting
+            default: false
+          skyblockpq.settings.FIRE:
+            description: Can configure the Fire setting
+            default: false
+          skyblockpq.settings.FIRE_EXTINGUISH:
+            description: Can configure the Fire Extinguish setting
+            default: false
+          skyblockpq.settings.FIRE_SPREAD:
+            description: Can configure the Fire Spread setting
+            default: false
+          skyblockpq.settings.FURNACE:
+            description: Can configure the Furnace setting
+            default: false
+          skyblockpq.settings.GATE:
+            description: Can configure the Gate setting
+            default: false
+          skyblockpq.settings.HORSE_INVENTORY:
+            description: Can configure the Horse Inventory setting
+            default: false
+          skyblockpq.settings.HORSE_RIDING:
+            description: Can configure the Horse Riding setting
+            default: false
+          skyblockpq.settings.HURT_MOBS:
+            description: Can configure the Hurt Mobs setting
+            default: false
+          skyblockpq.settings.HURT_MONSTERS:
+            description: Can configure the Hurt Monsters setting
+            default: false
+          skyblockpq.settings.LEASH:
+            description: Can configure the Leash setting
+            default: false
+          skyblockpq.settings.LEVER_BUTTON:
+            description: Can configure the Lever Button setting
+            default: false
+          skyblockpq.settings.MILKING:
+            description: Can configure the Milking setting
+            default: false
+          skyblockpq.settings.MOB_SPAWN:
+            description: Can configure the Mob Spawn setting
+            default: false
+          skyblockpq.settings.MONSTER_SPAWN:
+            description: Can configure the Monster Spawn setting
+            default: false
+          skyblockpq.settings.MUSIC:
+            description: Can configure the Music setting
+            default: false
+          skyblockpq.settings.NETHER_PVP:
+            description: Can configure the Nether Pvp setting
+            default: false
+          skyblockpq.settings.PLACE_BLOCKS:
+            description: Can configure the Place Blocks setting
+            default: false
+          skyblockpq.settings.PORTAL:
+            description: Can configure the Portal setting
+            default: false
+          skyblockpq.settings.PRESSURE_PLATE:
+            description: Can configure the Pressure Plate setting
+            default: false
+          skyblockpq.settings.PVP:
+            description: Can configure the Pvp setting
+            default: false
+          skyblockpq.settings.REDSTONE:
+            description: Can configure the Redstone setting
+            default: false
+          skyblockpq.settings.SPAWN_EGGS:
+            description: Can configure the Spawn Eggs setting
+            default: false
+          skyblockpq.settings.SHEARING:
+            description: Can configure the Shearing setting
+            default: false
+          skyblockpq.settings.VILLAGER_TRADING:
+            description: Can configure the Villager Trading setting
+            default: false
+          skyblockpq.settings.VISITOR_ITEM_DROP:
+            description: Can configure the Visitor Item Drop setting
+            default: false
+          skyblockpq.settings.VISITOR_ITEM_PICKUP:
+            description: Can configure the Visitor Item Pickup setting
+            default: false
+      skyblockpq.mod.*:
+        children:
+          skyblockpq.mod.topten:
+            description: Let a moderator update the top ten list
+            default: op
+          skyblockpq.mod.info:
+            description: Let a moderator see info on a player
+            default: op
+          skyblockpq.mod.challenges:
+            description: Let a moderator access challenge commands 
+            default: op
+          skyblockpq.mod.noburn:
+            description: Gives mod immunity to acid
+            default: op
+          skyblockpq.mod.resethome:
+            description: Allows setting or reseting of a player's home position
+            default: op
+          skyblockpq.mod.clearreset:
+            description: Allow clearing of island reset limit
+            default: op
+          skyblockpq.mod.tp:
+            description: Allows teleport to an island
+            default: op
+          skyblockpq.mod.tpnether:
+            description: Allows teleport to a nether island
+            default: op
+          skyblockpq.mod.bypassprotect:
+            description: Allow moderator to bypass island protection
+            default: op
+          skyblockpq.mod.bypassexpel:
+            description: Allow moderator to bypass island expulsion
+            default: op
+          skyblockpq.mod.setbiome:
+            description: Allows setting player island biomes
+            default: false
+          skyblockpq.mod.topbreeders:
+            description: Lists most populated islands current loaded
+            default: op
+          skyblockpq.mod.lock:
+            description: Locks or unlocks an island
+            default: op
+          skyblockpq.mod.bypasslock:
+            description: Bypasses an island lock
+            default: op
+          skyblockpq.mod.signadmin:
+            description: Enables warp sign admin commands
+            default: op
+          skyblockpq.mod.spy:
+            description: Spy on team chats
+            default: op
+          skyblockpq.mod.removesign:
+            description: Gives ability to remove warp signs
+            default: false
+          skyblockpq.mod.team:
+            description: Enables modification of teams via kick and add commands
+            default: false
+          skyblockpq.mod.name:
+            description: Enables naming of player's islands
+            default: false
+          skyblockpq.mod.resetname:
+            description: Enables reset of player's island names
+            default: false
+          skyblockpq.mod.setdeaths:
+            description: Sets how many deaths the player has
+            default: false
+          skyblockpq.mod.switch:
+            description: Allows mod to switch on/off bypass protection
+            default: false
+      skyblockpq.admin.*:
+        children:
+          skyblockpq.admin.clearresetall:
+            description: Allow clearing of island reset limit of all players
+            default: op
+          skyblockpq.admin.reload:
+            description: Reload the config.yml
+            default: op
+          skyblockpq.admin.delete:
+            description: Let a player completely remove a player (including island)
+            default: op
+          skyblockpq.admin.deleteisland:
+            description: Let a player completely remove the island the player is on
+            default: op
+          skyblockpq.admin.register:
+            description: Let a player register the nearest island to another player.
+            default: op
+          skyblockpq.admin.unregister:
+            description: Removes a player from an island without deleting the island blocks.
+            default: op
+          skyblockpq.admin.purge:
+            description: Let a player purge old islands.
+            default: op
+          skyblockpq.admin.noburn:
+            description: Gives admin immunity to acid
+            default: op
+          skyblockpq.admin.setspawn:
+            description: Allows use of spawn tools
+            default: op
+          skyblockpq.admin.setrange:
+            description: Allows setting of island protection range
+            default: op
+          skyblockpq.admin.topbreeders:
+            description: Lists most populated islands current loaded
+            default: op
+          skyblockpq.admin.reserve:
+            description: Reserves an empty spot for a player's next island
+            default: op
+          skyblockpq.admin.settingsreset:
+            description: Resets all the islands to default protection settings
+            default: op
+          skyblockpq.admin.noban:
+            description: Player cannot be banned from an island
+            default: op
+          skyblockpq.admin.cobblestats:
+            description: Displays magic cobble gen stats
+            default: op
+          skyblockpq.admin.setlanguage:
+            description: Resets all player languages and sets the default language
+            default: op
