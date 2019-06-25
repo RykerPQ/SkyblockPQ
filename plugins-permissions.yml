@@ -128,7 +128,7 @@ permissions:
             default: false
       skyblockpq.coop:
         description: Allows player to use the coop command
-        default: True    
+        default: true    
       skyblockpq.craft.*:
         children:
           skyblockpq.craft.enderchest:
