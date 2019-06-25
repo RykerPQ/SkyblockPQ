@@ -2,7 +2,7 @@ name: SkyblockPQ
 main: com.wasteofplastic.skyblockpq.SkyblockPQ
 version: ${version}
 description: A SkyBlock Plugin
-author: Rykerpq
+author: RykerPQ
 depend: [Vault]
 load: startup
 loadbefore: [Multiverse-Core]
