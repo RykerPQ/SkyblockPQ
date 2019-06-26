@@ -1,0 +1,460 @@
+
+# Config for SkyblockPQ V${version}
+# Maintainer: RykerPQ
+
+##### Island Related Settings #####
+
+island:
+
+   distance: 400
+
+   protectionRange: 150
+
+   startx: 0
+   startz: 0
+
+   sealevel: 0
+
+   islandlevel: 120
+
+   resetlimit: -1
+
+   resetwait: 300
+
+   resetconfirmwait: 5
+
+   invitewait: 45
+
+   invitetimeout: 120
+   
+   # Use this permission to set for specific user groups: skyblockpq.team.maxsize.<number>  
+   maxteamsize: 4
+   
+   levelwait: 30
+   
+   #chest items when you spawn on your island
+
+   chestItems: 'ICE:2 MELON:1 TORCH:2 BONE:1 LAVA_BUCKET:1 PUMPKIN_SEEDS:1 SUGAR_CANE:1 RED_MUSHROOM:1 BROWN_MUSHROOM:1 CACTUS:1 BREAD:1 WHEAT:1 LEATHER_BOOTS:1 LEATHER_HELMET:1 LEATHER_CHESTPLATE:1 LEATHER_LEGGINGS:1'
+
+   companion: WOLF
+
+   #default list of names, picked at random
+   #you can add more if you like
+   - "&9[player]'s wolf"
+   - "&cYour trusty companion"
+   - "Bonesy"
+   
+   # Only players with the skyblockpq.island.name permission can name their island 
+   minnamelength: 0
+   maxnamelength: 20
+      
+   flytimeoutside: 0
+   
+   islandtemporaryperms:
+   #- "amazing.permission"
+   
+  
+   allowendermangriefing: false
+
+   endermandeathdrop: true
+
+   allowcreeperdamage: true
+
+   allowcreepergriefing: false 
+
+   allowtntdamage: false
+
+   allowfireextinguish: false
+   # Allow chests to be blown up by creepers or TNT
+   allowchestdamage: false
+
+   allowvisitorkeepinvondeath: true
+
+   allowpistonpush: true
+
+   allowitemframedamage: false
+
+# General Settings
+general:
+
+   worldName: SkyblockPQ
+
+   defaultlanguage: en-US
+   
+   checkupdates: true
+   
+   silencecommandfeedback: true
+   
+   showinactionbar: true
+   
+   maxIslands: 0 
+   
+   usecontrolpanel: true
+
+   createnether: true
+
+   #nether-style island
+   newnether: true
+
+   nethertrees: true  
+
+   netherroof: true 
+
+   # Only applies to standard nether.
+   netherspawnradius: 5
+   
+   loginlevel: true
+   
+   coopscancreatewarps: true
+
+   visitorbannedcommands:
+   - spawner
+   - spawnmob
+
+   pvpcooldown: 15
+
+   invinciblevisitors: true
+   
+   # Only used if invinciblevisitors is set to TRUE
+   # See this for more info about options : https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+   invinciblevisitorsoptions:
+   - BLOCK_EXPLOSION
+   - CONTACT
+   - CUSTOM
+   - DROWNING
+   - ENTITY_ATTACK
+   - ENTITY_EXPLOSION
+   - FALL
+   - FALLING_BLOCK
+   - FIRE
+   - FIRE_TICK
+   - LAVA
+   - LIGHTNING
+   - MAGIC
+   - POISON
+   - PROJECTILE
+   - STARVATION
+   - SUFFOCATION
+   - THORNS
+   - WITHER
+   # 1.9+ only
+   - DRAGON_BREATH
+   - FLY_INTO_WALL
+   # 1.10+ only
+   - HOT_FLOOR
+   # 1.11+ only
+   - CRAMMING
+
+   loginremovemobs: false
+
+   islandremovemobs: false
+   
+   mobwhitelist:
+
+   monsterspawnlimit: 100
+   
+   animalspawnlimit: 15
+   
+   breedinglimit: 0
+   
+   wateranimalspawnlimit: 15
+
+   villagerlimit: 10
+      
+   entitylimits:
+     # Mobs, animals and other living entities
+     #BAT: 10
+     #BLAZE: 10
+     #BOAT: 10
+     #CAVE_SPIDER: 10
+     #CHICKEN: 10
+     #COW: 10
+     #CREEPER: 10
+     #DONKEY: 10
+     #ENDERMAN: 10
+     #HORSE: 10
+     #HUSK: 10
+     #IRON_GOLEM: 10
+     #LLAMA: 10
+     #MAGMA_CUBE: 10
+     #MULE: 10
+     #MUSHROOM_COW: 10
+     #OCELOT: 10
+     #PIG: 10
+     #PIG_ZOMBIE: 10
+     #POLAR_BEAR: 10
+     #RABBIT: 10
+     #SHEEP: 10
+     #SKELETON: 10
+     #SKELETON_HORSE: 10
+     #SLIME: 10
+     #SNOWMAN: 10
+     #SPIDER: 10
+     #SQUID: 10
+     #STRAY: 10
+     #WITCH: 10
+     #WITHER: 10
+     #WITHER_SKELETON: 10
+     #WOLF: 10
+     #ZOMBIE: 10
+     #ZOMBIE_HORSE: 10
+     #ZOMBIE_VILLAGER: 10     
+     # These are the ONLY blocks that can be limited (because they are entities).
+     #BANNER: 20
+     #ITEM_FRAME: 30
+     #FURNACE: 10
+     #CHEST: 50
+     #TRAPPED_CHEST: 50
+     #ENDER_CHEST: 0
+     #JUKEBOX: 5
+     #DISPENSER: 5
+     #DROPPER: 5
+     #SIGN: 10
+     #MOB_SPAWNER: 10
+     #NOTE_BLOCK: 5
+     #ENCHANTMENT_TABLE: 5
+     #BEACON: 12
+     #SKULL: 50
+     #DAYLIGHT_DETECTOR: 10
+     HOPPER: 30
+     #REDSTONE_COMPARATOR: 30
+     #FLOWER_POT: 20
+     #PAINTING: 5
+     #ARMOR_STAND: 5
+     #BREWING_STAND: 20
+ 
+   abandonedislandlevel: 45
+
+   maxpurge: 500
+   
+   deleteprotectedonly: false
+
+   useeconomy: true
+
+   resetmoney: false
+   
+   useminishop: true
+
+   startingmoney: 10.00
+
+   resetchallenges: true
+
+   resetinventory: true
+
+   kickedkeepinv: false
+
+   leaversloseresets: true
+   
+   resetenderchest: false
+
+   allowfallingteleport: true
+   blockingcommands:
+   - home
+   #- anotherCommand
+   #- andAnotherOne
+   #- "*"
+
+   broadcastmessages: true
+
+   removecompleteonetimechallenges: false
+
+   addcompletedglow: true
+   
+   # Use this permission to set for specific user groups: skyblockpq.island.maxhomes.<number>  
+   maxhomes: 1
+
+   makeislandifnone: false
+
+   immediateteleport: false
+
+   # Have player's respawn on their island if they die
+   respawnonisland: false
+
+   teamchat: true
+
+   logteamchat: true
+
+   chatlevelprefix: "{ISLAND_LEVEL}"
+   chatchallengelevelprefix: "{ISLAND_CHALLENGE_LEVEL}"
+   chatislandplayer: "{ISLAND_PLAYER}"
+   fancylevelinchat: true
+      
+   restrictwither: true
+   
+   # Warp Restriction - needed levels to be able to create a warp
+   # 0 or negative values will disable this restriction
+   # 10 is default
+   warplevelrestriction: 10
+   
+   usewarppanel: true
+   
+   # Mute death messages
+   mutedeathmessages: false
+   
+   backupduration: 5
+   
+   allowpushing: true
+
+   recoversuperflat: false
+   
+   persistentcoops: false
+   
+   onlyleadercancoop: true
+
+   coopisrequest: true
+
+   allowobsidianscooping: true
+   
+   islandtopteninchat: false
+   
+   usemagiccobblegen: true
+   
+   magiccobblegenonlyatspawn: false
+   
+     # These probabilities will apply by default
+     default:
+       COBBLESTONE: 50
+       STONE: 15
+       COAL_ORE: 15
+       IRON_ORE: 10
+       DIAMOND_ORE: 5
+       EMERALD_ORE: 3
+       REDSTONE_ORE: 2
+     #These probabilities will apply if island level is higher than 500.
+     500:
+       COBBLESTONE: 30
+       STONE: 20.0
+       COAL_ORE: 15
+       IRON_ORE: 15
+       REDSTONE_ORE: 13
+       DIAMOND_ORE: 7
+       EMERALD_ORE: 5
+  
+   disableofflineredstone: false
+   
+   allowTNTpushing: true
+   
+   # Config.yml version. DO NOT EDIT.
+   version: ${version}
+   
+# Protection settings
+protection:
+  
+   # Players can be given the ability to change settings in the GUI with permissions
+   # e.g. askyblock.settings.PVP or all settings with askyblock.settings.*
+   # Permissions are not case sensitive.
+   world:
+   
+     ANVIL: true
+    
+     ARMOR_STAND: false
+    
+     BEACON: true
+   
+     BED: false
+     
+     BREAK_BLOCKS: true
+    
+     BREEDING: true
+    
+     BREWING: true
+ 
+     BUCKET: true
+
+     COLLECT_LAVA: true
+     
+     COLLECT_WATER: true
+  
+     CHEST: true
+     
+     CHORUS_FRUIT: false
+    
+     CRAFTING: true
+   
+     CREEPER_PAIN: true
+     
+     CROP_TRAMPLE: false
+    
+     DOOR: true
+   
+     EGGS: true
+   
+     ENCHANTING: true
+   
+     ENDER_PEARL: false
+    
+     ENTER_EXIT_MESSAGES: true
+    
+     FIRE: true
+
+     FIRE_EXTINGUISH: true
+   
+     FIRE_SPREAD: false
+    
+     FURNACE: true
+  
+     GATE: false
+   
+     HORSE_INVENTORY: false
+    
+     HORSE_RIDING: false
+    
+     HURT_MOBS: false
+   
+     HURT_MONSTERS: true
+  
+     LEASH: false
+  
+     LEVER_BUTTON: true
+    
+     MILKING: true
+
+     MOB_SPAWN: true
+  
+     MONSTER_SPAWN: true
+     
+     MUSIC: false
+    
+     NETHER_PVP: false
+  
+     PLACE_BLOCKS: false
+   
+     PORTAL: true
+  
+     PRESSURE_PLATE: true
+  
+     PVP: false
+ 
+     REDSTONE: false
+  
+     SPAWN_EGGS: false
+    
+     SHEARING: false
+ 
+     VILLAGER_TRADING: true
+     
+     VISITOR_ITEM_DROP: true
+    
+     VISITOR_ITEM_PICKUP: true
+ 
+   # player the permission for the setting for them to be able to change the setting.
+   island:
+    
+     ANVIL: true
+
+     ARMOR_STAND: false
+   
+     BEACON: false
+
+     BED: false
+    
+     BREAK_BLOCKS: false
+  
+     BREEDING: false
+   
+     BREWING: false
+    
+     CHEST: false
+    
+     CRAFTING: true
+    
