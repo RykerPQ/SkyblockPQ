@@ -440,7 +440,7 @@ protection:
    # player the permission for the setting for them to be able to change the setting.
    island:
     
-     ANVIL: true
+     ANVIL: false
 
      ARMOR_STAND: false
    
@@ -456,5 +456,148 @@ protection:
     
      CHEST: false
     
-     CRAFTING: true
+     CRAFTING: false
     
+     DOOR: true
+    
+     EGGS: false
+  
+     ENCHANTING: false
+   
+     FURNACE: true
+    
+     GATE: false
+  
+     MUSIC: false
+
+     PORTAL: true
+    
+     PRESSURE_PLATE: false
+  
+     REDSTONE: false
+ 
+     SHEARING: false
+
+
+biomesettings:
+
+  defaultcost: 100
+
+ 
+  defaultbiome: PLAINS
+
+biomes:
+  COLD_BEACH:
+    icon: SAPLING
+    friendlyname: "&bCold &eBeach"
+    description: "&bSnowy and cold.|&bBrrr."
+  
+    #permission: any.perm.you.want
+  DESERT:
+    icon: DEAD_BUSH
+    friendlyname: "&eDesert"
+    description: "&eA dry desert.|&eWarning - Ice or|&esnow have to go."
+
+  MUTATED_FOREST:
+    icon: RED_ROSE
+    friendlyname: "&aFlower Forest"
+    description: "Trees and flowers!"
+    #permission: any.perm.you.want
+  HELL:
+    icon: LAVA_BUCKET
+    cost: 1000
+    permission: skyblockpq.biomes.hell
+    friendlyname: "&cNether"
+    description: "&eWarning - all water,|&esnow and ice will|&ebe removed."
+  JUNGLE:
+    icon: VINE
+    friendlyname: "&2Jungle"
+    description: "&aLush jungle.|&aWarning - Ice or|&asnow have to go."
+    premission: skyblockpq.biomes.jungle
+  MUSHROOM_ISLAND:
+    icon: RED_MUSHROOM
+    permission: skyblockpq.biomes.mushroom_island
+    friendlyname: "&cMushroom island"
+    description: "&cMushrooms!"
+  PLAINS:
+    icon: GRASS
+    description: Plain plains!
+    cost: 0
+    permission: skyblockpq.biomes.plains
+  SWAMPLAND:
+    icon: WATER_LILY
+    friendlyname: "&eSwampland"
+    description: "&2Swampy.|&eWarning - Ice or|&esnow have to go."
+    premission: skyblockpq.biomes.Swampland
+  MESA:
+    icon: HARD_CLAY
+    friendlyname: "&eMesa"
+    description: "&4Rare dry, desert biome.|&4Warning - Ice or|&4snow have to go."
+    permission: skyblockpq.biomes.mesa
+    cost: 500
+  SAVANNA:
+    icon: LONG_GRASS
+    friendlyname: "&eSavanna"
+    description: "&eFlat and dry, no rain.|&eWarning - Ice or|&esnow have to go."
+    permission: skyblockpq.biomes.mesa
+  ROOFED_FOREST:
+    icon: LOG
+    friendlyname: "&l&eRoofed Forest"
+    description: "&6Woods and trees"
+    permission: skyblockpq.biomes.roofed_forset
+
+
+schematicsection:
+
+  useschematicspanel: true
+
+
+  chooseislandrandomly: false
+
+
+  hackskeletonspawners: false
+  
+
+  schematics:
+  
+    default:
+    
+      icon: DIRT
+    
+      order: 1
+
+      name: "Basic"
+      # Longer description. Use | for new lines. Color codes okay.
+      description: "The Basic Island!!"
+     
+      filename: basic_island.schematic
+     
+      useDefaultChest: true
+  
+      partnerSchematic: nether
+    
+      levelHandicap: 3
+
+
+    nether:
+   
+      show: false
+      icon: NETHERRACK
+ 
+      biome: HELL
+      name: "NetherBlock Island"
+      description: "An island in the nether!"
+      filename: nether_island.schematic
+     
+      useDefaultChest: false
+
+      partnerSchematic: default
+    
+      pasteentities: true
+    
+      usephysics: true
+ 
+      levelHandicap: 93
+  
+
+   
