@@ -1,5 +1,5 @@
 name: SkyblockPQ
-main: com.wasteofplastic.skyblockpq.SkyblockPQ
+main: com.yermyerp.skyblockpq.SkyblockPQ
 version: ${version}
 description: A SkyBlock Plugin
 author: RykerPQ
